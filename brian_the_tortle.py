@@ -44,8 +44,12 @@ async def brian_command(ctx):
     #     await message.channel.send("Oh! why happy birthday my friend! I had no idea, mmmm... very good, yesh.")
 
 
-@bot.command(name='roll', help='<simulates rolling dice>')
+@bot.command(name='roll', help='<Brian will roll dice for you. Format: !roll [number of dice] [number of sides of the dice]>')
 async def roll(ctx, number_of_dice, number_of_sides):
+    if not number_of_sides:
+        await ctx.send("please choose the number of sides the dice you wish to roll has")
+    if not number_of_dice:
+        await ctx.send("please choose a number of dice to roll")
     applicable_sides = ["4", "6", "8", "10", "12", "20", "100"]
     if number_of_sides not in applicable_sides:
         await ctx.send("please choose an applicable type of dice")

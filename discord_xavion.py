@@ -29,7 +29,7 @@ async def streamup_command(ctx):
     if ctx.author == discord_bot.user:
         return
 
-    response = "@everyone it appears that the stream is running. P.B. Rebellium are at it again, folks! \n" \
+    response = "@everyone it appears that the stream is running. The Evil Bottoms are at it again, folks! \n" \
                "https://www.twitch.tv/into_the_multiverse"
     await ctx.send(response)
 
